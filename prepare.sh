@@ -38,6 +38,8 @@ echo "" >> feeds.conf
 # echo "src-git qmodem https://github.com/FUjr/QModem.git;main" >> feeds.conf
 echo "src-git qmodem https://github.com/zzzz0317/QModem.git;v3.0.1" >> feeds.conf
 echo "src-git istore https://github.com/linkease/istore;main" >> feeds.conf
+echo "src-git nas https://github.com/linkease/nas-packages.git;master" >> feeds.conf
+echo "src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main" >> feeds.conf
 echo "update files"
 rm -rf files
 cp -r ../files .
