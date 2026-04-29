@@ -67,6 +67,10 @@ echo "update feeds"
 echo "install feeds"
 ./scripts/feeds install -a || { echo "install feeds failed"; exit 1; }
 ./scripts/feeds install -a -f -p qmodem || { echo "install qmodem feeds failed"; exit 1; }
+./scripts/feeds update nas nas_luci
+./scripts/feeds install -a -p nas
+./scripts/feeds install -a -p nas_luci
+
 
 if [ -L "package/zz-packages" ]; then
     echo "package/zz-packages is already a symlink"
