@@ -2,3 +2,7 @@
 	path = zz-packages/xgp-v3-screen
 	url = https://github.com/junhong-l/xgp-v3-screen.git
 	branch = main
+[submodule "zz-packages/kmod-fb-tft-gc9307"]
+    path = zz-packages/kmod-fb-tft-gc9307
+    url = https://github.com/junhong-l/xgp-v3-screen.git
+    branch = main
