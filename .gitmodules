@@ -1,6 +1,6 @@
 [submodule "zz-packages/xgp-v3-screen"]
 	path = zz-packages/xgp-v3-screen
-	url = https://github.com/junhong-l/xgp-v3-screen.git
+	url = https://github.com/guangay/immortalwrt-xgp-auto-build/tree/main/zz-packages/xgp-v3-screen.git
 	branch = main
 [submodule "zz-packages/kmod-fb-tft-gc9307"]
     path = zz-packages/kmod-fb-tft-gc9307
