@@ -3,7 +3,8 @@ id
 df -h
 free -h
 cat /proc/cpuinfo
-
+echo "sync submodule config"
+git submodule sync
 echo "update submodules"
 # git submodule update --init --recursive --remote || { echo "submodule update failed"; exit 1; }
 git submodule update --init --recursive || { echo "submodule init failed"; exit 1; }
