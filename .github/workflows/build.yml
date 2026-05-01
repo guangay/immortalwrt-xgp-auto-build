@@ -49,9 +49,16 @@ jobs:
           free -h
       - name: Checkout code
         uses: actions/checkout@v4
+         - name: Disable runner Firefox snap update
+        run: |
+          sudo systemctl stop snapd.service snapd.socket 2>/dev/null || true
+          sudo snap disable firefox 2>/dev/null || true
+          sudo mv /etc/apt/apt.conf.d/20snapd.conf /etc/apt/apt.conf.d/20snapd.conf.disabled 2>/dev/null || true
+
       - name: Setup environment
         run: |
           sudo ./install-env.sh
+
       - name: Prepare
         run: |
           ./prepare.sh
