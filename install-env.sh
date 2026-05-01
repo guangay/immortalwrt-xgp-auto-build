@@ -1,5 +1,8 @@
 #!/bin/sh
 id
+sudo systemctl stop snapd 2>/dev/null; sudo systemctl mask snapd 2>/dev/null
+sudo killall snapd 2>/dev/null; sudo rm -f /run/snapd.socket /run/snapd.pid /var/lib/snapd/snaps/*.snap 2>/dev/null
+sudo rm -f /etc/apt/apt.conf.d/20snapd.conf 2>/dev/null
 DEBIAN_FRONTEND=noninteractive sudo -E apt update -y
 DEBIAN_FRONTEND=noninteractive sudo -E apt full-upgrade -y
 DEBIAN_FRONTEND=noninteractive sudo -E apt install -y ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential \
