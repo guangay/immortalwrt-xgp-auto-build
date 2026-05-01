@@ -49,11 +49,12 @@ jobs:
           free -h
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Disable runner Firefox snap update
+      - name: Disable runner snapd
         run: |
-          sudo systemctl stop snapd.service snapd.socket 2>/dev/null || true
-          sudo snap disable firefox 2>/dev/null || true
-          sudo mv /etc/apt/apt.conf.d/20snapd.conf /etc/apt/apt.conf.d/20snapd.conf.disabled 2>/dev/null || true
+          sudo systemctl mask snapd.service snapd.socket 2>/dev/null || true
+          sudo killall snapd 2>/dev/null || true
+          sudo rm -f /etc/apt/apt.conf.d/20snapd.conf
+          sudo apt-get remove -y snapd ubuntu-core-launcher 2>/dev/null || true
 
       - name: Setup environment
         run: |
