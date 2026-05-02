@@ -28,6 +28,9 @@
 
 
      /etc/init.d/appfilter stop
+
+
+
      /etc/init.d/appfilter disable
 ## ⚠️ 免责声明
 
