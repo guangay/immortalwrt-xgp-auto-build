@@ -17,7 +17,7 @@ if [ -d "immortalwrt" ]; then
     git clean -fd
 else
     echo "repo dir not exists"
-    git clone -b v25.12.0-rc2 --single-branch --filter=blob:none "https://github.com/immortalwrt/immortalwrt"
+    git clone -b v25.12.0 --single-branch --filter=blob:none "https://github.com/immortalwrt/immortalwrt"
     cd immortalwrt
 fi
 
